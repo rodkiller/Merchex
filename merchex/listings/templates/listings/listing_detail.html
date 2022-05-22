@@ -1,0 +1,23 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h2>{{ title.name }}</h2>
+
+
+<ul>
+    <li>description : {{ title.description }}</li>
+    <li>sold : {{ title.sold }}</li>
+    <li>year : {{ title.year }}</li>
+    <li>Actif : {{ band.active|yesno }}</li>
+    <li>Type : {{ title.get_type_display }}</li>
+
+
+</ul>
+
+
+
+   <a href="{% url 'title-list' %}">Retour à tous les listes</a>
+
+
+{% endblock %}
